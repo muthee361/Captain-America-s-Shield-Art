@@ -1,0 +1,119 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    display: grid;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+.container{
+    margin: 1rem;
+    background-color: black;
+    max-width: 100%;
+    border-radius: 6px;
+    text-align: center;
+}
+.items-wrapper{
+    
+    height: 490px;
+    width: 490px;
+    margin: 2rem 3rem;
+    background-color: rgb(228, 15, 79);
+    border-radius: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.outer1{
+   
+    height: 400px;
+    width: 400px;
+    background-color: whitesmoke;
+    border-radius: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.outer2{
+   
+    height: 300px;
+    width: 300px;
+    background-color: rgb(235, 32, 32);
+    border-radius: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.outer3{
+    height: 230px;
+    width: 230px;
+    background-color: rgb(3, 62, 80);    
+    border-radius: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.star{
+    margin: 50px 0;
+    position: relative;
+    display: block;
+    color: white;
+    width: 0px;
+    height: 0px;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid white;
+    border-left: 100px solid transparent;
+    transform: rotate(35deg);
+}
+.star:before{
+    border-bottom: 80px solid white;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -45px;
+    left: -65px;
+    display: block;
+    content: '';
+    transform: rotate(-35deg);
+}
+.star:after{
+    border-bottom: 70px solid white;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    position: absolute;
+    height: 0px;
+    width: 0px;
+    top: 3px;
+    left: -105px;
+    display: block;
+    color: white;
+    content: '';
+    transform: rotate(-70deg);
+}
+
+@keyframes rotate {
+    0%, 40%{transform: rotate(0deg);}
+    40%, 100% {transform: rotate(360deg);}
+    
+}
+.star{
+    animation: 6s rotate infinite;
+    animation-timing-function: linear;
+}
+.title{
+    background-color: white;
+}
+span{
+    color: lightseagreen;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
